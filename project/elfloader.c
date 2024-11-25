@@ -192,6 +192,8 @@ int main(int argc, char **argv)
 
     char *buff = read_file("\\EFI\\BOOT\\kernel.elf");
     uintptr_t entry = is_valid_elf(buff, (Elf64_Ehdr *)buff);
+    if (entry == 0)
+        return 1;
     free(buff);
 
     printf("ELF entry point %p\n", entry);

@@ -1,7 +1,6 @@
 ARCH = x86_64
 TARGET = BOOTX64.efi
 SRCS = elfloader.c
-ALSO = kernel.elf
 KERNEL = kernel.elf
 
 include uefi/Makefile
